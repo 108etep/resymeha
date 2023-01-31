@@ -22,10 +22,7 @@ body{
   text-transform: uppercase;
 }
 .header{
-  background-image: url(../images/header-bg.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
+ background-color: #161616;
   color: #fff;
   height: 100vh;
   width: 100%;
@@ -37,8 +34,18 @@ body{
   height: 60px;
   display: flex;
   align-items: center;
-  background-color: rgb(22 27 32);
   width: 100%;
+  position: relative;
+  z-index: 3;
+}
+.navmenu::before{
+  content: url(../images/header-bg.jpg);
+  position: absolute;
+  top: 195px;
+  left: 120px;
+  z-index: 1;
+  width: 1370px;
+  height: 751px;
 }
 .navmenu__list{
   height: 40px;
@@ -48,13 +55,18 @@ body{
   list-style: none;
   text-decoration: none;
   width: 100%;
+  z-index: 3
   
 }
 .navmenu__list-item{
-  margin-left: 40px;
-  
+  margin-right: 40px;
+ 
   
 }
+/* .list__item-home{
+  margin-left: 20px;
+  z-index: 3
+} */
 .list__item-link{
   color: #fff;
   font-size: 20px;
@@ -81,34 +93,44 @@ body{
 .container{
   position: relative;
   z-index: 3;
-  max-width: 1300px;
+  max-width: 1400px;
   margin: 0 auto;
+  padding-left: 20px;
+  padding-right: 20px;
+
 }
 .header__inner{
 display: block;
 margin-top: 10%;
 height: 100vh;
+position:relative;
+z-index: 3;
+
 }
 .lastname{
   font-size: 45px;
   font-weight: normal;
   text-transform: uppercase;
+
   
 }
 .lastname:hover{
   font-size: 50px;
   transition: all .7s;
   max-width: 200px;
+  
 }
 .firstname{
   font-weight: bold;
   font-size: 85px;
   line-height: 72px;
   max-width: 330px;
+ 
 }
 .firstname:hover{
   font-size: 90px;
   transition: all .7s;
+ 
 }
 .profession{
   letter-spacing: 12px;
